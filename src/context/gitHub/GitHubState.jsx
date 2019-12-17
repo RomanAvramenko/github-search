@@ -33,7 +33,7 @@ export const GitHubState = ({ children }) => {
         })
     }
 
-    const getUsers = async name => {
+    const getUser = async name => {
         setLoading()
 
         const response = await axios.get(
@@ -67,7 +67,7 @@ export const GitHubState = ({ children }) => {
 
     return (
         <GitHubContext.Provider value={{
-            setLoading, search, getUsers, getRepos, clearUsers,
+            setLoading, search, getUser, getRepos, clearUsers,
             user, users, repos, loading
         }}>
             {children}
